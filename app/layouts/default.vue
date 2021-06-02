@@ -10,7 +10,7 @@
       <template slot-scope="props" slot="links">
         <sidebar-item
           :link="{
-            name: 'Dashboard',
+            name: 'Panel de Control',
             icon: 'tim-icons icon-laptop',
             path: '/dashboard'
           }"
@@ -19,7 +19,7 @@
 
         <sidebar-item
           :link="{
-            name: 'Devices',
+            name: 'Dispositivos',
             icon: 'tim-icons icon-light-3',
             path: '/devices'
           }"
@@ -28,7 +28,7 @@
 
         <sidebar-item
           :link="{
-            name: 'Alarms',
+            name: 'Alarmas',
             icon: 'tim-icons icon-bell-55',
             path: '/alarms'
           }"
@@ -37,7 +37,7 @@
 
         <sidebar-item
           :link="{
-            name: 'Templates',
+            name: 'Plantillas',
             icon: 'tim-icons icon-atom',
             path: '/templates'
           }"

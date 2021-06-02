@@ -3,8 +3,8 @@
     <div class="col-lg-4 col-md-6 ml-auto mr-auto">
       <card class="card-login card-white">
         <template slot="header">
-          <img src="img//card-primary.png" alt="" />
-          <h1 class="card-title">IoT GL   </h1>
+          <img src="img//card-info.png" alt="" />
+          <h1 class="card-title">Proyecto IoT   </h1>
         </template>
 
         <div>
@@ -29,7 +29,7 @@
         <div slot="footer">
           <base-button
             native-type="submit"
-            type="primary"
+            type="blue"
             class="mb-3"
             size="lg"
             @click="login()"
@@ -40,7 +40,7 @@
           <div class="pull-left">
             <h6>
               <nuxt-link class="link footer-link" to="/register">
-                Create Account
+                Crear Registro
               </nuxt-link>
             </h6>
           </div>

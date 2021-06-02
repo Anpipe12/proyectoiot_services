@@ -4,15 +4,15 @@
     <div class="row">
       <card>
         <div slot="header">
-          <h4 class="card-title">Add new Device</h4>
+          <h4 class="card-title">Adicionar Nuevo Dispositivo</h4>
         </div>
 
         <div class="row">
           <div class="col-4">
             <base-input
-              label="Device Name"
+              label="Nombre Dispositivo"
               type="text"
-              placeholder="Ex: Home, Office..."
+              placeholder="Ej: Casa, Oficina, Almacen..."
               v-model="newDevice.name"
             >
             </base-input>
@@ -20,9 +20,9 @@
 
           <div class="col-4">
             <base-input
-              label="Device Id"
+              label="Id Dispositivo"
               type="text"
-              placeholder="Ex: 7777-8888"
+              placeholder="Ej: 7777-8888..."
               v-model="newDevice.dId"
             >
             </base-input>
@@ -30,12 +30,12 @@
 
           <div class="col-4">
             <slot name="label">
-              <label> Template </label>
+              <label> Plantilla </label>
             </slot>
 
             <el-select
               v-model="selectedIndexTemplate"
-              placeholder="Select Template"
+              placeholder="Seleccionar Plantilla"
               class="select-primary"
               style="width:100%"
             >
@@ -54,10 +54,10 @@
           <div class="col-12">
             <base-button
               @click="createNewDevice()"
-              type="primary"
+              type="blue"
               class="mb-3"
               size="lg"
-              >Add</base-button
+              >Adicionar Dispositivo</base-button
             >
           </div>
         </div>
@@ -68,7 +68,7 @@
     <div class="row">
       <card>
         <div slot="header">
-          <h4 class="card-title">Devices</h4>
+          <h4 class="card-title">Lista Dispositivos</h4>
         </div>
 
         <el-table :data="$store.state.devices">
@@ -78,18 +78,18 @@
             </div>
           </el-table-column>
 
-          <el-table-column prop="name" label="Name"></el-table-column>
+          <el-table-column prop="name" label="Nombre"></el-table-column>
 
-          <el-table-column prop="dId" label="Device Id"></el-table-column>
+          <el-table-column prop="dId" label="Id Dispositivo"></el-table-column>
 
           <el-table-column prop="password" label="Password"></el-table-column>
 
           <el-table-column
             prop="templateName"
-            label="Template"
+            label="Plantilla"
           ></el-table-column>
 
-          <el-table-column label="Actions">
+          <el-table-column label="Accion">
             <div slot-scope="{ row, $index }">
               <el-tooltip
                 content="Saver Status Indicator"

@@ -6,7 +6,7 @@
         <card v-if="$store.state.devices.length > 0">
           <div slot="header">
             <h4 class="card-title">
-              Create new Alarm Rule {{ selectedWidgetIndex }}
+              Crear Nueva Regla de Alarma {{ selectedWidgetIndex }}
             </h4>
           </div>
 
@@ -34,7 +34,7 @@
               <el-select
                 required
                 class="select-warning"
-                placeholder="Condition"
+                placeholder="Condicion"
                 v-model="newRule.condition"
                 style="margin-top: 25px;"
               >
@@ -49,7 +49,7 @@
 
             <div class="col-3">
               <base-input
-                label="Value"
+                label="Valor"
                 v-model="newRule.value"
                 type="number"
               ></base-input>
@@ -57,7 +57,7 @@
 
             <div class="col-3">
               <base-input
-                label="Trigger Time"
+                label="Tiempo de Activacion"
                 v-model="newRule.triggerTime"
                 type="number"
               ></base-input>
@@ -71,18 +71,18 @@
               <base-button
                 @click="createNewRule()"
                 native-type="submit"
-                type="primary"
+                type="blue"
                 class="mb-3"
                 size="lg"
                 :disabled="$store.state.devices.length == 0"
               >
-                Add Alarm Rule
+                Adicionar Alarma
               </base-button>
             </div>
           </div>
         </card>
         <card v-else>
-          You need to select a device to create an Alarm
+          Debe seleccionar un dispositivo para crear una alarma
         </card>
       </div>
     </div>
@@ -92,7 +92,7 @@
       <div class="col-sm-12">
         <card>
           <div slot="header">
-            <h4 class="card-title">Alarm Rules</h4>
+            <h4 class="card-title">Lista de Reglas de alarma</h4>
           </div>
 
           <el-table
@@ -107,26 +107,26 @@
 
             <el-table-column
               prop="variableFullName"
-              label="Var Name"
+              label="Nombre de Variable"
             ></el-table-column>
 
             <el-table-column prop="variable" label="Var"></el-table-column>
 
             <el-table-column
               prop="condition"
-              label="Condition"
+              label="Condicion"
             ></el-table-column>
 
-            <el-table-column prop="value" label="Value"></el-table-column>
+            <el-table-column prop="value" label="Valor"></el-table-column>
 
             <el-table-column
               prop="triggerTime"
-              label="Trigger Time"
+              label="Tiempo de Activacion"
             ></el-table-column>
 
             <el-table-column prop="counter" label="Matches"></el-table-column>
 
-            <el-table-column min-width="110" header-align="right" align="right" label="Actions">
+            <el-table-column min-width="110" header-align="right" align="right" label="Accion">
               <div
                 slot-scope="{ row, $index }"
                 class="text-right table-actions"
@@ -169,7 +169,7 @@
             </el-table-column>
           </el-table>
 
-          <h4 v-else class="card-title">No Alarm Rules</h4>
+          <h4 v-else class="card-title">No Exiten Reglas de Alarma</h4>
         </card>
       </div>
     </div>

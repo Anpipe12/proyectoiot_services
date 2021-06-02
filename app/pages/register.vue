@@ -3,15 +3,15 @@
     <div class="col-lg-4 col-md-6 ml-auto mr-auto">
       <card class="card-login card-white">
         <template slot="header">
-          <img src="img//card-primary.png" alt="" />
-          <h1 class="card-title">IoT GL</h1>
+          <img src="img//card-info.png" alt="" />
+          <h1 class="card-title">Proyecto IoT</h1>
         </template>
 
         <div>
           <base-input
             name="name"
             v-model="user.name"
-            placeholder="Name"
+            placeholder="Nombre"
             addon-left-icon="tim-icons icon-badge"
           >
           </base-input>
@@ -37,13 +37,13 @@
         <div slot="footer">
           <base-button
             native-type="submit"
-            type="primary"
+            type="blue"
             class="mb-3"
             size="lg"
             @click="register()"
             block
           >
-            Register
+            Registrarse
           </base-button>
 
           <div class="pull-left">

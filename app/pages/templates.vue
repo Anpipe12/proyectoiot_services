@@ -14,35 +14,35 @@
             <el-select
               v-model="widgetType"
               class="select-success"
-              placeholder="Select Widget"
+              placeholder="Seleccionar Widget"
               style="width: 100%;"
             >
               <el-option
                 class="text-dark"
                 value="numberchart"
-                label="Number Chart INPUT <-"
+                label="Chart de Entrada <-"
               >
               </el-option>
               <el-option
                 class="text-dark"
                 value="indicator"
-                label="Boolean Indicator INPUT <-"
+                label="Indicator de Entrada <-"
               >
               </el-option>
               <el-option
                 class="text-dark"
                 value="map"
-                label="Map INPUT <-"
+                label="Map Entrada <-"
               ></el-option>
               <el-option
                 class="text-dark"
                 value="switch"
-                label="Switch OUTPUT ->"
+                label="Switch de Salida ->"
               ></el-option>
               <el-option
                 class="text-dark"
                 value="button"
-                label="Button OUTPUT ->"
+                label="Botton de Salida ->"
               ></el-option>
             </el-select>
 
@@ -557,12 +557,12 @@
           <div class="col-12">
             <base-button
               native-type="submit"
-              type="primary"
+              type="blue"
               class="mb-3"
               size="lg"
               @click="addNewWidget()"
             >
-              Add Widget
+              Adicionar Widget
             </base-button>
           </div>
         </div>
@@ -609,14 +609,14 @@
     <div class="row" >
       <card>
         <div slot="header">
-          <h4 class="card-title">Save Template</h4>
+          <h4 class="card-title">Listar Plantilla</h4>
         </div>
 
         <div class="row">
           <base-input
             class="col-4"
             v-model="templateName"
-            label="Template Name"
+            label="Nombre Template"
             type="text"
           >
           </base-input>
@@ -624,7 +624,7 @@
           <base-input
             class="col-8"
             v-model="templateDescription"
-            label="Template Description"
+            label="Descripcion"
             type="text"
           >
           </base-input>
@@ -636,13 +636,13 @@
           <div class="col-12">
             <base-button
               native-type="submit"
-              type="primary"
+              type="blue"
               class="mb-3 pull-right"
               size="lg"
               @click="saveTemplate()"
               :disabled="widgets.length == 0"
             >
-              Save Template
+              Guardar Plantilla
             </base-button>
           </div>
         </div>
@@ -653,7 +653,7 @@
     <div class="row">
       <card>
         <div slot="header">
-          <h4 class="card-title">Templates</h4>
+          <h4 class="card-title">Lista de Plantillas</h4>
         </div>
 
         <div class="row">
@@ -664,11 +664,11 @@
               </div>
             </el-table-column>
 
-            <el-table-column prop="name" label="Name"></el-table-column>
+            <el-table-column prop="name" label="Nombre"></el-table-column>
 
             <el-table-column
               prop="description"
-              label="Description"
+              label="Descripcion"
             ></el-table-column>
 
             <el-table-column
@@ -676,7 +676,7 @@
               label="Widgets"
             ></el-table-column>
 
-            <el-table-column header-align="right" align="right" label="Actions">
+            <el-table-column header-align="right" align="right" label="Accion">
               <div
                 slot-scope="{ row, $index }"
                 class="text-right table-actions"
