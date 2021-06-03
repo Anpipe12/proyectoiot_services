@@ -1,8 +1,8 @@
 {
-  "name": "iot_gl_app",
+  "name": "iot_pro_app",
   "version": "1.0.0",
-  "description": "IOT_GL_APP",
-  "author": "IoTicos.org",
+  "description": "IOT_PRO_APP",
+  "author": "Anpipe12",
   "scripts": {
     "dev": "nuxt",
     "devn": "nodemon api/index.js --exec babel-node",
@@ -21,6 +21,7 @@
     "core-js": "^3.7.0",
     "cors": "^2.8.5",
     "d3": "^5.7.0",
+    "dotenv": "^10.0.0",
     "element-ui": "^2.14.1",
     "es6-promise": "^4.1.1",
     "express": "^4.17.1",
