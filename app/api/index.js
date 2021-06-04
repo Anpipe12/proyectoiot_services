@@ -1,9 +1,11 @@
-//requires
+//requires 
 const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
 const colors = require("colors");
+
+
 
 require('dotenv').config();
 
@@ -57,6 +59,8 @@ var uri =
   "/" +
   mongoDatabase;
 
+  console.log(uri);
+
 const options = {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -72,6 +76,8 @@ mongoose.connect(uri, options).then(
     console.log("✔ Mongo Successfully Connected!".green);
     console.log("*******************************".green);
     console.log("\n");
+    global.check_mqtt_superuser();
+
   },
   err => {
     console.log("\n");
