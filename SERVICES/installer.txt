@@ -13,3 +13,6 @@ cd proyectoiot
 // WARNING .ENV 
 
 sudo docker-compose -f docker-compose-production.yml up
+
+sudo git clone https://github.com/Anpipe12/proyecto_iot_app.git
+sudo mv proyecto_iot_app app
